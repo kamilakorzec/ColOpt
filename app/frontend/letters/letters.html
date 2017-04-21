@@ -1,0 +1,20 @@
+<div class="letters-bg" style="background: {{lambdaRgb}}" tabindex="0">
+    <div class="letters-container" style="font-size: {{letterHeight}}px">
+        <span class="icon-{{letter1}}"></span>
+        <span class="icon-{{letter2}}"></span>
+        <span class="icon-{{letter3}}"></span>
+        <span class="icon-{{letter4}}"></span>
+        <span class="icon-{{letter5}}"></span>
+    </div>
+    <div style="font-size: xx-small; align-content: center; opacity: 0.5">
+            <button ng-click="allGood()">All correct</button>
+            <button ng-click="pass()">Pass</button>
+            <input type="text" ng-model="letterAns[0]">
+            <input type="text" ng-model="letterAns[1]">
+            <input type="text" ng-model="letterAns[2]">
+            <input type="text" ng-model="letterAns[3]">
+            <input type="text" ng-model="letterAns[4]">
+            <button ng-click="updateData()">Dalej</button>
+        </div>
+    </div>
+</div>

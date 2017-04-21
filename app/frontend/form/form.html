@@ -1,0 +1,129 @@
+<div class="col-sm-offset-2 col-sm-6">
+    <div id="form-header" class="col-sm-12"><h1>Informacje o badanym</h1></div>
+    <div id="form-container" class="col-sm-12">
+        <div id="form-age" class="row">
+            <div class="col-sm-3">Wiek</div>
+            <div class="col-sm-9">
+                <input ng-model="info.age" type="number" min="15" max="50">
+            </div>
+        </div>
+        <div id="form-gender" class="row">
+            <div class="col-sm-3">Płeć</div>
+            <div class="col-sm-9">
+                <select ng-model="info.gender" ng-options="g for g in gender">
+                </select>
+            </div>
+        </div>
+        <div id="form-acuity" class="row">
+            <div class="col-sm-3">Wady wzroku</div>
+            <div class="col-sm-9">
+                <div class="row">
+                    <div class="col-sm-1">
+                        <input type="checkbox" ng-model="info.eyes.myopia.left">
+                    </div>
+                    <div class="col-sm-1">
+                        <input type="checkbox" ng-model="info.eyes.myopia.right">
+                    </div>
+                    <div class="col-sm-10">
+                        {{eyes.myopia}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <input type="checkbox" ng-model="info.eyes.hyperopia.left">
+                    </div>
+                    <div class="col-sm-1">
+                        <input type="checkbox" ng-model="info.eyes.hyperopia.right">
+                    </div>
+                    <div class="col-sm-10">
+                        {{eyes.hyperopia}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <input type="checkbox" ng-model="info.eyes.astigmatism.left">
+                    </div>
+                    <div class="col-sm-1">
+                        <input type="checkbox" ng-model="info.eyes.astigmatism.right">
+                    </div>
+                    <div class="col-sm-10">
+                        {{eyes.astigmatism}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1">
+                    </div>
+                    <div class="col-sm-1">
+                        <input type="checkbox" ng-model="info.eyes.dichromatism">
+                    </div>
+                    <div class="col-sm-10">
+                        {{eyes.dichromatism}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1">
+                    </div>
+                    <div class="col-sm-1">
+                        <input type="checkbox" ng-model="info.eyes.trichromatism">
+                    </div>
+                    <div class="col-sm-10">
+                        {{eyes.trichromatism}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1">
+                    </div>
+                    <div class="col-sm-1">
+                        <input type="checkbox" ng-model="info.eyes.monochromatism">
+                    </div>
+                    <div class="col-sm-10">
+                        {{eyes.monochromatism}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="col-sm-12"><h2>Szczegóły</h2></div>
+                <div class="row">
+                    <div class="col-sm-6">OL</div>
+                    <div class="col-sm-6">OP</div>
+                </div>
+                <div class="row" ng-if="info.eyes.myopia.left || info.eyes.myopia.right">
+                    <div class="col-sm-12">{{eyes.myopia}}</div>
+                    <div class="col-sm-6">
+                        <input type="number" step="0.25" ng-model="info.eyes.myopia.exactLeft">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="number" step="0.25" ng-model="info.eyes.myopia.exactRight">
+                    </div>
+                </div>
+                <div class="row" ng-if="info.eyes.hyperopia.left || info.eyes.hyperopia.right">
+                    <div class="col-sm-12">{{eyes.hyperopia}}</div>
+                    <div class="col-sm-6">
+                        <input type="number" step="0.25" ng-model="info.eyes.hyperopia.exactLeft">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="number" step="0.25" ng-model="info.eyes.hyperopia.exactRight">
+                    </div>
+                </div>
+                <div class="row" ng-if="info.eyes.astigmatism.left || info.eyes.astigmatism.right">
+                    <div class="col-sm-12">{{eyes.astigmatism}}</div>
+                    <div class="col-sm-6">
+                        <input type="number" step="0.25" ng-model="info.eyes.astigmatism.exactLeft">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="number" step="0.25" ng-model="info.eyes.astigmatism.exactRight">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">Dodatkowe informacje:</div>
+                    <div class="col-sm-12">
+                        <textarea type="text" rows="5" cols="50" ng-model="info.eyes.extra"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-sm-offset-7">
+        <button ng-click="goToEtdrs()">Przejdź do badania</button>
+    </div>
+</div>

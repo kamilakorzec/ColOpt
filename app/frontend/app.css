@@ -1,0 +1,144 @@
+/* app css stylesheet */
+
+/*fonts*/
+
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?378880');
+    src:    url('fonts/icomoon.eot?378880#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?378880') format('truetype'),
+    url('fonts/icomoon.woff?378880') format('woff'),
+    url('fonts/icomoon.svg?378880#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-A:before {
+    content: "\e900";
+}
+.icon-B:before {
+    content: "\e901";
+}
+.icon-C:before {
+    content: "\e902";
+}
+.icon-D:before {
+    content: "\e903";
+}
+.icon-E:before {
+    content: "\e904";
+}
+.icon-F:before {
+    content: "\e905";
+}
+.icon-G:before {
+    content: "\e906";
+}
+.icon-H:before {
+    content: "\e907";
+}
+.icon-I:before {
+    content: "\e908";
+}
+.icon-J:before {
+    content: "\e909";
+}
+.icon-K:before {
+    content: "\e90a";
+}
+.icon-L:before {
+    content: "\e90b";
+}
+.icon-M:before {
+    content: "\e90c";
+}
+.icon-N:before {
+    content: "\e90d";
+}
+.icon-O:before {
+    content: "\e90e";
+}
+.icon-P:before {
+    content: "\e90f";
+}
+.icon-Q:before {
+    content: "\e910";
+}
+.icon-R:before {
+    content: "\e911";
+}
+.icon-S:before {
+    content: "\e912";
+}
+.icon-T:before {
+    content: "\e913";
+}
+.icon-U:before {
+    content: "\e914";
+}
+.icon-V:before {
+    content: "\e915";
+}
+.icon-W:before {
+    content: "\e916";
+}
+.icon-X:before {
+    content: "\e917";
+}
+.icon-Y:before {
+    content: "\e918";
+}
+.icon-Z:before {
+    content: "\e919";
+}
+
+/*letters view*/
+
+.letters-bg {
+    height: 100vh;
+    text-align: center;
+}
+
+.letters-container {
+    height: 95vh;
+}
+
+.letters-container span {
+    line-height: 95vh;
+}
+
+.letters-navigation {
+    height: 5vh;
+}
+
+span {
+    margin-left: 30px;
+    color: black;
+}
+
+/*stats view*/
+
+td, th {
+    padding: 0 8px;
+    text-align: center;
+    font-size: x-small;
+}
+
+.stats-divs {
+    margin-left: 50px;
+}
