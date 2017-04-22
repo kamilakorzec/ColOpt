@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="thesisApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="thesisApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="thesisApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="thesisApp" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html lang="en" ng-app="colOpt" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="colOpt" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="colOpt" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="colOpt" class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Acuity vs Wavelength</title>
+  <title>ColOpt - thesis app</title>
   <meta name="description" content="Bachelor thesis application">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
@@ -32,8 +32,16 @@
   <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
   <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="app.js"></script>
-  <script src="form/form.js"></script>
-  <script src="letters/letters.js"></script>
-  <script src="statistics/statistics.js"></script>
+  <script src="form/index.js"></script>
+  <script src="form/form.controller.js"></script>
+  <script src="form/form-data.constant.js"></script>
+  <script src="letters/index.js"></script>
+  <script src="letters/letters.controller.js"></script>
+  <script src="letters/colors.service.js"></script>
+  <script src="statistics/index.js"></script>
+  <script src="statistics/data-adapter.service.js"></script>
+  <script src="statistics/statistics.controller.js"></script>
+  <script src="data-resource/index.js"></script>
+  <script src="data-resource/data-resource.factory.js"></script>
 </body>
 </html>

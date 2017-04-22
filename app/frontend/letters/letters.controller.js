@@ -1,13 +1,6 @@
 'use strict';
 
-angular.module('thesisApp.letters', ['ngRoute'])
-
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/letters', {
-    templateUrl: 'letters/letters.html',
-    controller: 'LettersCtrl'
-  });
-}])
+angular.module('colOpt.letters')
 
 .controller('LettersCtrl', ['$scope', '$stateParams', '$http', '$state', function($scope, $stateParams, $http, $state) {
 

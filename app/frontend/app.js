@@ -21,19 +21,16 @@ if(!window.app) {
           params: {
               info: {}
           }
-          }
-        )
+        })
         .state('form', {
           url:'/',
           templateUrl: 'form/form.html',
           controller: 'FormCtrl'
-          }
-        )
+        })
         .state('stats', {
           url:'/stats',
           templateUrl: 'statistics/statistics.html',
           controller: 'StatsCtrl'
-          }
-        )
+        })
   }]);
 }

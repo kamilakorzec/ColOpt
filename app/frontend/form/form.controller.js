@@ -1,13 +1,6 @@
 'use strict';
 
-angular.module('thesisApp.form', ['ngRoute'])
-
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/', {
-    templateUrl: 'form/form.html',
-    controller: 'FormCtrl'
-  });
-}])
+angular.module('colOpt.form')
 
 .controller('FormCtrl', ['$scope', '$state', function($scope, $state) {
   $scope.info = {
