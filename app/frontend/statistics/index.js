@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('colOpt.statistics', ['ngRoute', 'ui.bootstrap'])
+angular.module('colOpt.statistics', ['ngRoute', 'ui.bootstrap', 'colOpt.data'])
 
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/stats', {

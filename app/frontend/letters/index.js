@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('colOpt.letters', ['ngRoute'])
+angular.module('colOpt.letters', ['ngRoute', 'colOpt.data'])
 
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/letters', {

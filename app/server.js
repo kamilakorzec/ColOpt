@@ -4,7 +4,7 @@ var fs = require("fs");
 
 app.use(express.static('frontend'));
 
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 9000;
 
 // ROUTES FOR API
 // =============================================================================

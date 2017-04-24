@@ -1,6 +1,6 @@
 'use strict';
 
-// Declare app level module which depends on views, and components
+// Declare app level module which depends on views, and components 123
 if(!window.app) {
   window.app = angular.module('colOpt', [
     'ngRoute',
