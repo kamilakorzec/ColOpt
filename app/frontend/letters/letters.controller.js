@@ -14,7 +14,7 @@ angular.module('colOpt.letters')
 
   $scope.pass = function() {
     info.acuity.push([$scope.color, logMar]);
-    $scope.letterHeight = Math.round(letterHeight / Math.pow(1.25892541179, 5) );
+    $scope.letterHeight = LetterSize.getInitSize();
     l++;
     logMar = 0.5;
     init();

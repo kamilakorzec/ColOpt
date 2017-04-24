@@ -19,16 +19,24 @@ angular.module('colOpt.letters')
       return array;
     }
 
+    var sizes = [99, 79, 62, 50, 39, 31, 25, 20, 16, 12, 10];
+    //hardcoded values for letter size for 170cm distance and 250μm pixel size
+
     function letters() {
       return shuffle(['C', 'D', 'H', 'K', 'N', 'O', 'R', 'S', 'V', 'Z']);
     }
 
+    function initSize() {
+      return sizes[0];
+    }
+
     function letterSize(currentSize) {
-      return currentSize/1.25892541179;
+      return sizes[sizes.indexOf(currentSize)+1];
     }
 
     return {
       getLetters: letters,
-      getLetterSize: letterSize
+      getLetterSize: letterSize,
+      getInitSize: initSize
     }
   }]);
