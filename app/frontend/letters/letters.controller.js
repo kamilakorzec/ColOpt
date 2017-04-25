@@ -4,11 +4,12 @@ angular.module('colOpt.letters')
 
 .controller('LettersCtrl', ['$scope', '$data', '$state', 'Colors', 'LetterSize', function($scope, $data, $state, Colors, LetterSize) {
 
-  var letters=[], error=0, logMar=0.5;
+  var letters=[], error=0, logMar=1;
   var l=0;
   var info = $state.params.info || {};
   info.acuity = [];
   $scope.letterAns = [];
+  $scope.letterHeight = LetterSize.getInitSize();
 
   var colors = Colors;
 
@@ -16,7 +17,7 @@ angular.module('colOpt.letters')
     info.acuity.push([$scope.color, logMar]);
     $scope.letterHeight = LetterSize.getInitSize();
     l++;
-    logMar = 0.5;
+    logMar = 1;
     init();
   };
 

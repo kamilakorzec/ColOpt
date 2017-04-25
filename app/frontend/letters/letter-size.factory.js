@@ -31,6 +31,8 @@ angular.module('colOpt.letters')
     }
 
     function letterSize(currentSize) {
+      var index = sizes.indexOf(currentSize)+1;
+      if(index < 1 || index === sizes.length) return Math.round(currentSize/1.258925411); //for people with better acuity than 0 logMar
       return sizes[sizes.indexOf(currentSize)+1];
     }
 
