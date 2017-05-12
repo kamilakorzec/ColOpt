@@ -140,5 +140,6 @@ td, th {
 }
 
 .stats-divs {
-    margin-left: 50px;
+    padding-left: 50px;
+    padding-top: 30px;
 }

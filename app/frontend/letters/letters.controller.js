@@ -63,8 +63,10 @@ angular.module('colOpt.letters')
     }
     else
     {
-      $data.post(info);
-      $state.go('stats');
+      $data.post(info)
+        .then(function () {
+          $state.go('stats');
+        });
     }
   }
 

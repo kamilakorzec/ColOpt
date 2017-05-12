@@ -6,10 +6,15 @@ angular.module('colOpt.data')
     var serverUrl = 'http://localhost:3000/results';
 
     function post(info) {
-      $http.post(serverUrl, {info: info});
+      return $http.post(serverUrl, {info: info});
+    }
+
+    function get() {
+      return $http.get(serverUrl);
     }
 
     this.post = post;
+    this.get = get;
 
     return this
   }]);

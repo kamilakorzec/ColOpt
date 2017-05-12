@@ -2,39 +2,34 @@
     <div class="table-stats">
         <button ng-click="toBeginning()">Do początku badania</button>
         <table class="table-striped">
-            <thead><h2>Wyniki - tablica</h2></thead>
+            <thead><h3>Dotychczasowe wyniki</h3></thead>
             <tbody>
                 <tr>
                     <th>ID</th><th>Wiek</th><th>Płeć</th><th>Wady wzroku</th>
-                    <th ng-repeat="lambda in lambdas">{{lambda}}</th>
+                    <th ng-repeat="lambda in lambdas"><span style="color: {{lambda}}">{{lambda}}</span></th>
                 </tr>
-                <tr ng-repeat="record in data" ng-if=" $index > 0 ">
+                <tr ng-repeat="record in data">
                     <td>{{record.id}}</td>
-                    <td>{{record.info.age}}</td>
-                    <td>{{record.info.gender}}</td>
+                    <td>{{record.info.age || 'N/A'}}</td>
+                    <td>{{record.info.gender || 'N/A'}}</td>
                     <td>
-                        <table>
+                        <table ng-if="record.info.eyes.length">
                             <tr>
                                 <th>Wada</th><th>OL</th><th>OP</th>
                             </tr>
                             <tr ng-repeat="(name,eye) in record.info.eyes">
                                 <td ng-if="eye.right || eye.left">{{name}}</td>
-                                <td ng-if="eye.right || eye.left">{{eye.exactLeft}}</td>
-                                <td ng-if="eye.right || eye.left">{{eye.exactRight}}</td>
+                                <td ng-if="eye.right || eye.left">{{eye.exactLeft | exportableNumber}}</td>
+                                <td ng-if="eye.right || eye.left">{{eye.exactRight | exportableNumber}}</td>
                             </tr>
                         </table>
+                        <span ng-if="!record.info.eyes.length">N/A</span>
                     </td>
                     <td ng-repeat="result in record.info.acuity">
-                        {{result[1] | number: 3}}
+                        {{result[1] | number: 3 | exportableNumber}}
                     </td>
                 </tr>
             </tbody>
         </table>
-        <div class="last-result">
-            <h2>Wykres - ostatni wynik</h2>
-        </div>
-        <div class="stats-chart">
-            <h2>Statystyki badań</h2>
-        </div>
     </div>
 </div>
