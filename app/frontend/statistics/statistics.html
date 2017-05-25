@@ -12,21 +12,9 @@
                     <td>{{record.id}}</td>
                     <td>{{record.info.age || 'N/A'}}</td>
                     <td>{{record.info.gender || 'N/A'}}</td>
-                    <td>
-                        <table ng-if="record.info.eyes.length">
-                            <tr>
-                                <th>Wada</th><th>OL</th><th>OP</th>
-                            </tr>
-                            <tr ng-repeat="(name,eye) in record.info.eyes">
-                                <td ng-if="eye.right || eye.left">{{name}}</td>
-                                <td ng-if="eye.right || eye.left">{{eye.exactLeft | exportableNumber}}</td>
-                                <td ng-if="eye.right || eye.left">{{eye.exactRight | exportableNumber}}</td>
-                            </tr>
-                        </table>
-                        <span ng-if="!record.info.eyes.length">N/A</span>
-                    </td>
-                    <td ng-repeat="result in record.info.acuity">
-                        {{result[1] | number: 3 | exportableNumber}}
+                    <td>{{record.info.eyes.extra || 'N/A'}}</td>
+                    <td ng-repeat="lambda in lambdas">
+                        {{record.info.acuity[lambda] | number: 3 | exportableNumber}}
                     </td>
                 </tr>
             </tbody>

@@ -7,14 +7,14 @@ angular.module('colOpt.letters')
   var letters=[], error=0, logMar=1;
   var l=0;
   var info = $state.params.info || {};
-  info.acuity = [];
+  info.acuity = {};
   $scope.letterAns = [];
   $scope.letterHeight = LetterSize.getInitSize();
 
   var colors = Colors;
 
   $scope.pass = function() {
-    info.acuity.push([$scope.color, logMar]);
+    info.acuity[$scope.color] = logMar;
     $scope.letterHeight = LetterSize.getInitSize();
     l++;
     logMar = 1;

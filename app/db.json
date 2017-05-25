@@ -1,4 +1,62 @@
 {
   "results": [
+    {
+      "info": {
+        "eyes": {
+          "myopia": {
+            "right": true,
+            "left": true,
+            "exactLeft": -3,
+            "exactRight": -0.5
+          },
+          "hyperopia": {},
+          "astigmatism": {
+            "left": false,
+            "right": false
+          },
+          "extra": "wada skorygowana, badany nosi okulary"
+        },
+        "age": 26,
+        "gender": "Mężczyzna",
+        "acuity": {
+          "#ff0000": -0.19999999999999984,
+          "#0000b7": -0.17999999999999985,
+          "#750059": -0.19999999999999984,
+          "#003459": -0.17999999999999985,
+          "#007d00": -0.27999999999999986
+        }
+      },
+      "id": 1
+    },
+    {
+      "info": {
+        "eyes": {
+          "myopia": {
+            "left": true,
+            "right": true,
+            "exactLeft": -3.25,
+            "exactRight": -2.75
+          },
+          "hyperopia": {},
+          "astigmatism": {
+            "right": true,
+            "left": true,
+            "exactLeft": 0.5,
+            "exactRight": 0.5
+          },
+          "extra": "skorygowana wada wzroku"
+        },
+        "age": 22,
+        "gender": "Kobieta",
+        "acuity": {
+          "#0000b7": -0.19999999999999987,
+          "#007d00": -0.2999999999999999,
+          "#750059": -0.23999999999999985,
+          "#ff0000": -0.2999999999999999,
+          "#003459": -0.15999999999999986
+        }
+      },
+      "id": 2
+    }
   ]
 }

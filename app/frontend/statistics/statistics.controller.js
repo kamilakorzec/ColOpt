@@ -2,7 +2,7 @@
 
 angular.module('colOpt.statistics')
 
-  .controller('StatsCtrl', [ '$scope', '$data', 'Colors', function($scope, $data, Colors) {
+  .controller('StatsCtrl', [ '$scope', '$data', 'Colors', '$state', function($scope, $data, Colors, $state) {
     function getResults() {
       $scope.lambdas = Colors;
       $data.get()
